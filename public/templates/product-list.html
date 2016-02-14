@@ -1,0 +1,38 @@
+<div>
+    Choose a product
+
+    <ul>
+    <% _.each(availableProds, function(product){ %>
+
+        <li><%- product.value.name %></li>
+        <li><%- product.value.price %></li>
+        <li><%- product.value.color %></li>
+        <li>
+            Quantity:
+            <input type="text">
+        </li>
+    <% }) %>
+    </ul>
+
+    <form class="form-horizontal" role="form" id="loginForm">
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Nume proiect:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="projName" placeholder="Enter name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" >Buget:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="buget" placeholder="Enter color">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <input type="button" id="addProd" class="submit-btn btn btn-success" value="Save">
+            </div>
+        </div>
+    </form>
+
+</div>
